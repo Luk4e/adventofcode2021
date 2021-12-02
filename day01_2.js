@@ -1,7 +1,7 @@
 fs = require('fs');
 
 try{
-    let data = fs.readFileSync('/home/luca/Documents/adventofcode2021/input_file/day01_2input.txt','utf8');
+    let data = fs.readFileSync('/home/luca/Documents/adventofcode2021/input_file/day01input.txt','utf8');
     const lines = data.split(/\r?\n/);
 
     console.log(countIncrise(lines))
