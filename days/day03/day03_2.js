@@ -42,18 +42,18 @@ function searchOxigenOrCO2(data,i,minOrMax,dataLength){
         if(minOrMax===0){
             //Here I compare the list's length and I choose the correct one to apply recusion on it
             if(ones.length>=zeros.length){
-                result = searchOxigenOrCO2(ones,i+1,minOrMax,dataLength);
+                return searchOxigenOrCO2(ones,i+1,minOrMax,dataLength);
             }else{
-                result = searchOxigenOrCO2(zeros,i+1,minOrMax,dataLength);
+                return searchOxigenOrCO2(zeros,i+1,minOrMax,dataLength);
             }
         }else if(minOrMax===1){
             if(zeros.length<=ones.length){
-                result = searchOxigenOrCO2(zeros,i+1,minOrMax,dataLength);
+                return searchOxigenOrCO2(zeros,i+1,minOrMax,dataLength);
             }else{
-                result = searchOxigenOrCO2(ones,i+1,minOrMax,dataLength);
+                return searchOxigenOrCO2(ones,i+1,minOrMax,dataLength);
             }
         }
-        return result;
+        
     }
 }
   
